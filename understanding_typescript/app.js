@@ -50,3 +50,52 @@ function multiply(value1, value2) {
 }
 // console.log(multiply(2, "max"));
 console.log(multiply(10, 2));
+// function types
+var myMultiply;
+// myMultiply = sayHello;
+// myMultiply();
+myMultiply = multiply;
+console.log(myMultiply(5, 2));
+// objects
+var userData = {
+    name: "Max",
+    age: 27
+};
+// userData = {
+//   a: "Hello",
+//   b: 22
+// };
+// complex object
+var complex = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+var complex2 = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+// union types
+var myRealRealAge = "27";
+myRealRealAge = 27;
+// myRealRealAge = true;
+// check types
+var finalValue = 31;
+if (typeof finalValue === "number") {
+    console.log("Final value is a number");
+}
+// never
+function neverReturns() {
+    throw new Error("An Error!");
+}
+// Nullable Types
+var canBeNull = 12;
+canBeNull = null;
+var canAlsoBeNull;
+canAlsoBeNull = null;
+var canThisBeAny = null;
+canThisBeAny = 12;
+canThisBeAny = "123";
